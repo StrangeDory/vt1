@@ -2,9 +2,35 @@ public class ProgrammerBook extends Book{
     private String language;
     private int level;
 
+    public ProgrammerBook(String title, String author, int price,
+                          String language, int level, String isbn){
+        super(title, author, price, isbn);
+        this.language = language;
+        this.level = level;
+    }
+
+    public void setLanguage(String language) {
+        this.language = language;
+    }
+
+    public String getLanguage() {
+        return language;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
+    }
+
+    public int getLevel() {
+        return level;
+    }
+
     @Override
     public boolean equals(Object book) {
-        return (((ProgrammerBook)book).language.equalsIgnoreCase(this.language) && ((ProgrammerBook)book).level == this.level) ? true : false;
+        if(book instanceof ProgrammerBook)
+            return ((ProgrammerBook) book).language.equalsIgnoreCase(this.language) && ((ProgrammerBook) book).level == this.level;
+        else
+            return false;
     }
 
     @Override
@@ -14,7 +40,6 @@ public class ProgrammerBook extends Book{
 
     @Override
     public String toString(){
-        String str = this.language + " для уровня " + this.level;
-        return str;
+        return this.language + " для уровня " + this.level;
     }
 }
