@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.TreeSet;
 
 public class task12 {
@@ -31,7 +30,7 @@ public class task12 {
         pascal.setTitle("Les Miserables"); pascal.setAuthor("Victor Hugo");
         pascal2.setTitle("War and Peace"); pascal2.setAuthor("Leo Tolstoy");
 
-        TreeSet<Book> mySet = new TreeSet<Book>();
+        TreeSet<Book> mySet = new TreeSet<>();
         mySet.add(book1);
         mySet.add(other);
         mySet.add(pascal);
