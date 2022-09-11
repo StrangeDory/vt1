@@ -40,6 +40,6 @@ public class ProgrammerBook extends Book{
 
     @Override
     public String toString(){
-        return this.language + " для уровня " + this.level;
+        return super.toString() + " " + this.language + " для уровня " + this.level;
     }
 }
